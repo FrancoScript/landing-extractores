@@ -1,0 +1,59 @@
+:root {
+  --main-color: #efe6d9;
+  --secondary-color: #342b24;
+}
+
+/* Reset básico para html, body y elementos internos del header */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+header h1,
+header p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo del enlace dentro del header */
+header a {
+  color: white;
+  display: flex;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Opcional: si quieres que los elementos tengan espacio entre sí */
+header nav {
+  display: flex;
+  gap: 5px; /* espacio entre h1, p y a */
+}
+
+#direct-wsp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* verde WhatsApp */
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+#direct-wsp:hover {
+  background-color: #20b858;
+}
