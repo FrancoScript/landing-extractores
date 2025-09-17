@@ -77,6 +77,14 @@ nav {
   padding: 2rem 1rem;
 }
 
+#sobre-nosotros p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
 .nosotros {
   display: flex;
   justify-content: center;
@@ -107,31 +115,50 @@ nav {
 .ir-catalogo:hover {
   background-color: var(--catalogo-text-hover);
 }
-
 #contacto {
+  background-color: #f9f9f9;
   padding: 40px 20px;
-  background: var(--header-text);
   text-align: center;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
 #contacto h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #004466;
+}
+
+/* Imagen del mapa */
+#contacto a img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacto a img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Info de contacto debajo del mapa */
+.contacto-info {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: var(--body-text);
 }
 
 .contacto-info p {
-  margin: 10px 0;
-  font-size: 1rem;
+  margin: 8px 0;
 }
 
 .contacto-info a {
-  color: #0077cc;
+  color: var(--);
   text-decoration: none;
-}
-
-.contacto-info a:hover {
-  text-decoration: underline;
+  font-weight: 600;
 }
 
 /* SECCIÓN MAPA */
@@ -144,18 +171,21 @@ nav {
 #mapa h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #004466;
+  color: var(--body);
 }
 
-#mapa iframe {
-  width: 100%;
+#mapa img {
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  width: 400px;
   max-width: 900px;
-  height: 400px;
+  height: 250px;
   border: none;
   border-radius: 10px;
 }
 
-/* BOTÓN WHATSAPP FLOTANTE */
+/* BOTÓN WHATSAPP */
 #direct-wsp {
   position: fixed;
   bottom: 20px;
@@ -172,8 +202,8 @@ nav {
 }
 
 #img-wsp {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 /* FOOTER */
@@ -197,7 +227,6 @@ footer .social a {
 footer .social img {
   width: 24px;
   height: 24px;
-  filter: invert(1);
 }
 
 footer p {
@@ -224,4 +253,24 @@ footer p {
 }
 #direct-wsp:hover {
   background-color: #20b858;
+}
+
+.parallax {
+  position: relative;
+  background-image: url("../img/img-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.parallax .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
 }
