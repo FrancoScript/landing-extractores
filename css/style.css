@@ -1,51 +1,214 @@
 :root {
   --main-color: #efe6d9;
   --secondary-color: #342b24;
+
+  --header: #004466;
+  --header-text: #ffffff;
+  --body: #eef6f9;
+  --body-text: #004466;
+
+  --catalogo: #dceaf4;
+  --catalogo-text: #004466;
+  --catalogo-text-hover: #006196;
+
+  --footer: #004466;
+  --footer-text: #ffffff;
+  --footer-socials: #ffffff;
 }
 
-/* Reset básico para html, body y elementos internos del header */
 body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--body);
+  color: var(--body-text);
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: var(--secondary-color);
-  color: white;
-  padding: 20px;
+  background-color: var(--header);
+  color: var(--header-text);
+  padding: 1rem;
   display: flex;
   justify-content: center;
 }
 
-header h1,
-header p {
+.title {
+  font-size: 1.8rem;
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Estilo del enlace dentro del header */
-header a {
-  color: white;
-  display: flex;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 10px;
+p {
+  margin: 0.3rem 0 1rem;
+  font-size: 1rem;
 }
 
-/* Opcional: si quieres que los elementos tengan espacio entre sí */
 header nav {
   display: flex;
-  gap: 5px; /* espacio entre h1, p y a */
+  gap: 5px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#trabajos {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.galeria img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#sobre-nosotros {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#catalogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ir-catalogo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: var(--body-text);
+  color: var(--body);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.ir-catalogo:hover {
+  background-color: var(--catalogo-text-hover);
+}
+
+#contacto {
+  padding: 40px 20px;
+  background: var(--header-text);
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004466;
+}
+
+.contacto-info p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.contacto-info a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.contacto-info a:hover {
+  text-decoration: underline;
+}
+
+/* SECCIÓN MAPA */
+#mapa {
+  padding: 40px 20px;
+  background: #eef6f9;
+  text-align: center;
+}
+
+#mapa h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004466;
+}
+
+#mapa iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* BOTÓN WHATSAPP FLOTANTE */
+#direct-wsp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+#direct-wsp:hover {
+  transform: scale(1.1);
+}
+
+#img-wsp {
+  width: 40px;
+  height: 40px;
+}
+
+/* FOOTER */
+footer {
+  background: #004466;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+}
+
+footer .social {
+  margin-bottom: 10px;
+}
+
+footer .social a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+footer .social img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+footer p {
+  font-size: 0.9rem;
 }
 
 #direct-wsp {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366; /* verde WhatsApp */
+  background-color: #25d366;
   color: white;
   padding: 12px 18px;
   border-radius: 50px;
@@ -53,6 +216,11 @@ header nav {
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+}
+
+#img-wsp {
+  width: 30px;
+  height: 30px;
 }
 #direct-wsp:hover {
   background-color: #20b858;
