@@ -63,7 +63,7 @@ nav {
 }
 
 .galeria img {
-  width: 250px;
+  width: auto;
   height: 400px;
   border-radius: 8px;
   object-fit: cover;
