@@ -63,8 +63,8 @@ nav {
 }
 
 .galeria img {
-  width: auto;
-  height: 400px;
+  width: 250px;
+  height: 400px; /* altura fija para todas */
   border-radius: 8px;
   object-fit: cover;
 }
