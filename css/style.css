@@ -92,7 +92,7 @@ nav {
   aspect-ratio: unset;
   object-fit: contain;
   border-radius: 8px;
-  background: var(--body); /* Usa el color de fondo del body */
+  background: var(--body);
 }
 
 /** SOBRE NOSOTROS */
@@ -420,7 +420,7 @@ footer p {
   }
 }
 
-/* Estilos Lightbox */
+/** Estilos Lightbox */
 #lightbox {
   display: none;
   position: fixed;
@@ -450,4 +450,20 @@ footer p {
 }
 .producto img:hover {
   transform: scale(1.05);
+}
+
+#cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 60px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+  z-index: 1001;
+}
+
+#cerrar:hover {
+  color: #f00;
 }

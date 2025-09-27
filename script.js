@@ -6,3 +6,7 @@ function vistaPrevia(src) {
 function cerrarPreview() {
     document.getElementById('lightbox').style.display = 'none';
 }
+
+document.getElementById('lightbox-img').addEventListener('click', function (event) {
+    event.stopPropagation();
+});
