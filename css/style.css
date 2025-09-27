@@ -86,10 +86,13 @@ nav {
 }
 
 .galeria img {
-  width: 250px;
-  height: 400px;
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  aspect-ratio: unset;
+  object-fit: contain;
   border-radius: 8px;
-  object-fit: cover;
+  background: var(--body); /* Usa el color de fondo del body */
 }
 
 /** SOBRE NOSOTROS */
@@ -162,8 +165,9 @@ nav {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
-  max-width: 320px;
+  max-width: 500px;
   flex: 1 1 300px;
+  margin-bottom: 20px;
 }
 
 .producto:hover {
@@ -173,7 +177,7 @@ nav {
 
 .producto img {
   width: 100%;
-  height: 180px;
+  height: 400px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -361,12 +365,14 @@ footer p {
   .galeria {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .galeria img {
-    width: 90vw;
-    max-width: 350px;
-    height: 180px;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
   }
 
   #sobre-nosotros p {
@@ -391,8 +397,9 @@ footer p {
 
 @media (max-width: 480px) {
   .galeria img {
-    max-width: 250px;
-    height: 150px;
+    max-width: 95%;
+    width: auto;
+    height: auto;
   }
 
   footer p {
@@ -411,4 +418,36 @@ footer p {
   .info-producto p {
     font-size: 0.9rem;
   }
+}
+
+/* Estilos Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+.productos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.producto img {
+  cursor: pointer;
+  width: 200px;
+  height: auto;
+  transition: transform 0.2s;
+}
+.producto img:hover {
+  transform: scale(1.05);
 }

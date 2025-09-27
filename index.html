@@ -10,10 +10,10 @@
       rel="stylesheet"
     />
 
-    <title>Extractores Eólicos</title>
+    <title>Extractores Eólicos Miguel Correa - Hojalatería en Temuco</title>
     <meta
       name="description"
-      content="Servicios de fabricación extractores eólicos y hojalatería."
+      content="Fábrica de extractores eólicos y trabajos de hojalatería en Temuco. Teléfono: +569 73237330"
     />
   </head>
   <body>
@@ -62,14 +62,17 @@
         <h2>Nuestros Trabajos</h2>
         <div class="galeria">
           <img
-            src="./img/trabajo.png"
+            src="./img/img-trabajo.png"
             alt="Extractor eólico en techo metálico"
           />
           <img
-            src="./img/trabajo2.jpg"
+            src="./img/img-trabajo1.png"
             alt="Extractor eólico fabricado en acero inoxidable"
           />
-          <img src="./img/trabajo3.jpg" alt="Campana para quincho instalada" />
+          <img
+            src="./img/img-trabajo2.png"
+            alt="Campana para quincho instalada"
+          />
         </div>
       </section>
 
@@ -80,6 +83,7 @@
             <img
               src="./img/prod-extractor.jpg"
               alt="Extractor Eólico 12 pulgadas"
+              onclick="vistaPrevia(this.src)"
             />
             <h3>Producto 1</h3>
             <p>pequeña descripcion (tamaño o con que se trabaja)</p>
@@ -90,6 +94,7 @@
             <img
               src="./img/prod-campana-grande.jpg"
               alt="Extractor Eólico 18 pulgadas"
+              onclick="vistaPrevia(this.src)"
             />
             <h3>Producto 2</h3>
             <p>pequeña descripcion (tamaño o con que se trabaja).</p>
@@ -100,12 +105,53 @@
             <img
               src="./img/prod-campana.jpg"
               alt="Extractor Eólico Inoxidable"
+              onclick="vistaPrevia(this.src)"
             />
             <h3>Producto 3</h3>
             <p>pequeña descripcion (tamaño o con que se trabaja)</p>
             <p><strong>Tamaños:</strong> ... pulgadas</p>
             <p><strong>Precio aprox:</strong> a consultar</p>
           </div>
+        </div>
+
+        <div class="productos">
+          <div class="producto">
+            <img
+              src="./img/trabajo4.jpg"
+              alt="Extractor Eólico 12 pulgadas"
+              onclick="vistaPrevia(this.src)"
+            />
+            <h3>Producto 4</h3>
+            <p>pequeña descripcion (tamaño o con que se trabaja)</p>
+            <p><strong>Tamaño:</strong> ... pulgadas</p>
+            <p><strong>Precio aprox:</strong> $XX.XXX</p>
+          </div>
+          <div class="producto">
+            <img
+              src="./img/trabajo3.jpg"
+              alt="Extractor Eólico 18 pulgadas"
+              onclick="vistaPrevia(this.src)"
+            />
+            <h3>Producto 5</h3>
+            <p>pequeña descripcion (tamaño o con que se trabaja).</p>
+            <p><strong>Tamaño:</strong> ...pulgadas</p>
+            <p><strong>Precio aprox:</strong> $XX.XXX</p>
+          </div>
+          <div class="producto">
+            <img
+              src="./img/trabajo6.jpg"
+              alt="Extractor Eólico Inoxidable"
+              onclick="vistaPrevia(this.src)"
+            />
+            <h3>Producto 6</h3>
+            <p>pequeña descripcion (tamaño o con que se trabaja)</p>
+            <p><strong>Tamaños:</strong> ... pulgadas</p>
+            <p><strong>Precio aprox:</strong> a consultar</p>
+          </div>
+        </div>
+
+        <div id="lightbox" onclick="cerrarPreview()">
+          <img id="lightbox-img" src="" alt="" />
         </div>
       </section>
 
@@ -122,10 +168,12 @@
         <div class="contacto-info">
           <p><strong>Dirección: </strong> Av. Pedro de Valdivia #0673</p>
           <p><strong>Teléfono: </strong>+569 73237330</p>
-          <p><strong>Email: </strong> correoejemplo@gmail.com</p>
+          <p><strong>Email: </strong> miguelcorream@gmail.com</p>
         </div>
       </section>
     </main>
+
+    <script src="script.js"></script>
 
     <a
       id="direct-wsp"
