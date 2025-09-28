@@ -313,7 +313,7 @@ footer p {
 /** PARALLAX */
 .parallax {
   position: relative;
-  background-image: url("../img/prod-extractor.jpg");
+  background-image: url("../img/background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
