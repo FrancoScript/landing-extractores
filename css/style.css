@@ -71,7 +71,6 @@ nav {
   align-items: center;
 }
 
-/** GALERÍA */
 #trabajos {
   margin-bottom: 2.5rem;
   text-align: center;
@@ -95,7 +94,6 @@ nav {
   background: var(--body);
 }
 
-/** SOBRE NOSOTROS */
 #sobre-nosotros {
   text-align: center;
   padding: 2rem 1rem;
@@ -138,7 +136,6 @@ nav {
   align-items: center;
 }
 
-/** CATÁLOGO */
 #catalogo {
   text-align: center;
   padding: 2rem 1rem;
@@ -203,7 +200,6 @@ nav {
   color: #000;
 }
 
-/** CONTACTO */
 #contacto {
   background-color: #f9f9f9;
   padding: 40px 20px;
@@ -242,7 +238,6 @@ nav {
   margin: 8px 0;
 }
 
-/** MAPA */
 #mapa {
   padding: 40px 20px;
   background: #eef6f9;
@@ -255,7 +250,6 @@ nav {
   color: var(--body);
 }
 
-/** BOTÓN WHATSAPP */
 #direct-wsp {
   position: fixed;
   bottom: 20px;
@@ -283,7 +277,6 @@ nav {
   display: block;
 }
 
-/** FOOTER */
 footer {
   background: #004466;
   color: white;
@@ -310,7 +303,6 @@ footer p {
   font-size: 0.9rem;
 }
 
-/** PARALLAX */
 .parallax {
   position: relative;
   background-image: url("../img/background.jpg");
@@ -331,7 +323,6 @@ footer p {
   border-radius: 8px;
 }
 
-/** ANIMACIÓN */
 .fade-in {
   opacity: 0;
   transform: translateY(50px);
@@ -346,7 +337,6 @@ footer p {
   }
 }
 
-/** MEDIA QUERIES */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -420,7 +410,6 @@ footer p {
   }
 }
 
-/** Estilos Lightbox */
 #lightbox {
   display: none;
   position: fixed;
