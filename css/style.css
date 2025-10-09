@@ -95,7 +95,6 @@ header nav {
 .navbar a:not(:last-child)::after {
   content: "|";
   color: var(--header-text);
-  margin-left: 0.5rem;
 }
 
 .navbar a:hover {
