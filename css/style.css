@@ -67,6 +67,7 @@ header nav {
 
 .navbar {
   display: flex;
+  padding: 1rem 1.5rem;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
@@ -86,7 +87,15 @@ header nav {
   text-decoration: none;
   font-weight: 500;
   white-space: nowrap;
+  padding: 0 0.5rem;
+  position: relative;
   transition: color 0.3s;
+}
+
+.navbar a:not(:last-child)::after {
+  content: "|";
+  color: var(--header-text);
+  margin-left: 0.5rem;
 }
 
 .navbar a:hover {
@@ -97,7 +106,7 @@ header nav {
   .navbar {
     gap: 1rem;
     font-size: 0.9rem;
-    padding: 0.5rem;
+    padding: rem 0.5rem;
     justify-content: center; /* centrado horizontal */
   }
 
