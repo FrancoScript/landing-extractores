@@ -71,22 +71,30 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
-  flex-wrap: nowrap;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
   white-space: nowrap;
-  overflow-x: auto;
+  gap: 1rem;
 }
 
-.topbar a,
 .topbar p {
   margin: 0;
-  color: white;
 }
 
 .topbar a {
+  color: white;
   text-decoration: none;
+}
+
+.topbar a:hover {
+  color: #00aaff;
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 
 .navbar {
@@ -299,13 +307,27 @@ html {
 }
 
 .contacto-info {
-  margin-top: 20px;
-  font-size: 1rem;
-  color: var(--body-text);
+  display: flex;
+  flex-direction: column; /* apila cada bloque */
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .contacto-info p {
-  margin: 8px 0;
+  margin: 0.2rem 0;
+  word-break: break-word; /* evita que correo se salga */
+}
+
+.contacto-info a {
+  color: var(--body-text);
+  text-decoration: none;
+}
+
+.contacto-info a:hover {
+  color: var(--catalogo-text-hover);
 }
 
 #mapa {
@@ -322,16 +344,16 @@ html {
 
 #direct-wsp {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 10px;
+  right: 10px;
   background: #25d366;
   padding: 10px;
   border-radius: 50%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
   z-index: 1000;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
