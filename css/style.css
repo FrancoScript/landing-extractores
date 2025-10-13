@@ -36,19 +36,6 @@ header {
   width: 100%;
 }
 
-.header-info .title {
-  font-size: 1.8rem;
-  margin: 0;
-  text-align: center;
-}
-
-.header-info p {
-  margin: 0.3rem 0 1rem;
-  font-size: 1rem;
-  text-align: center;
-  width: 100%;
-}
-
 .title {
   font-size: 1.8rem;
   margin: 0;
@@ -73,7 +60,7 @@ header nav {
   align-items: center;
   padding: 0.4rem 1rem;
   font-size: 0.85rem;
-  white-space: nowrap;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -464,6 +451,7 @@ footer p {
   }
 }
 
+/* ----------- Ajustes generales hasta 768px ----------- */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -473,10 +461,12 @@ footer p {
 
   .header-info .title {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   .header-info p {
     font-size: 0.95rem;
+    text-align: center;
   }
 
   .galeria {
@@ -510,30 +500,71 @@ footer p {
     height: 150px;
     max-width: 350px;
   }
+
+  /* Contacto responsive */
+  .contacto-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .contacto-mapa img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  #mapa {
+    padding: 30px 10px;
+  }
+
+  #mapa h2 {
+    font-size: 1.6rem;
+  }
 }
 
-@media (max-width: 480px) {
-  .galeria img {
-    max-width: 95%;
-    width: auto;
-    height: auto;
+@media (max-width: 400px) {
+  .contacto-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    gap: 1rem;
   }
 
-  footer p {
-    font-size: 0.8rem;
-  }
-
-  .producto img {
-    height: 120px;
-    max-width: 250px;
-  }
-
-  .info-producto h3 {
-    font-size: 1rem;
-  }
-
-  .info-producto p {
+  .contacto-info {
+    width: 100%;
+    text-align: left;
     font-size: 0.9rem;
+  }
+
+  .contacto-info p {
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .contacto-mapa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .contacto-mapa img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+  }
+
+  #mapa {
+    padding: 25px 10px;
+  }
+
+  #mapa h2 {
+    font-size: 1.2rem;
   }
 }
 
@@ -582,4 +613,41 @@ footer p {
 
 #cerrar:hover {
   color: rgb(121, 121, 121);
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 400px) {
+  .navbar {
+    gap: 0.5rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .navbar a {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 340px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .navbar a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  header {
+    padding: 0.5rem 0.3rem; /* menos padding que en 1rem */
+  }
+
+  .header-info .title {
+    font-size: 1.2rem; /* texto más pequeño para que no se desborde */
+  }
+
+  .header-info p {
+    font-size: 0.85rem;
+  }
 }
