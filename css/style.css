@@ -118,18 +118,29 @@ header nav {
   color: var(--header-text);
   text-decoration: none;
   font-weight: 500;
-  white-space: nowrap;
   position: relative;
   transition: color 0.3s;
-}
-
-.navbar a:not(:last-child)::after {
-  content: "|";
-  color: var(--header-text);
+  padding: 0.2rem 0.5rem; /* un poquito de padding para facilitar hover */
 }
 
 .navbar a:hover {
-  color: #0078ff;
+  color: var(--catalogo-text-hover);
+}
+
+/* Opcional: efecto de subrayado animado */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--catalogo-text-hover);
+  transition: width 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 600px) {
