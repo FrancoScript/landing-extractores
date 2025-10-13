@@ -120,14 +120,13 @@ header nav {
   font-weight: 500;
   position: relative;
   transition: color 0.3s;
-  padding: 0.2rem 0.5rem; /* un poquito de padding para facilitar hover */
+  padding: 0.2rem 0.5rem;
 }
 
 .navbar a:hover {
   color: var(--catalogo-text-hover);
 }
 
-/* Opcional: efecto de subrayado animado */
 .navbar a::after {
   content: "";
   position: absolute;
@@ -148,11 +147,11 @@ header nav {
     gap: 1rem;
     font-size: 0.9rem;
     padding: 0.5rem;
-    justify-content: center; /* centrado horizontal */
+    justify-content: center;
   }
 
   .navbar a {
-    white-space: nowrap; /* no rompen línea */
+    white-space: nowrap;
   }
 }
 
@@ -300,7 +299,7 @@ html {
 
 #contacto h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 #contacto a img {
@@ -317,28 +316,53 @@ html {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.contacto-info {
+.contacto-wrapper {
   display: flex;
-  flex-direction: column; /* apila cada bloque */
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contacto-info {
+  flex: 1 1 300px;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.contacto-item img {
+  width: 30px;
+  height: 30px;
+}
+
+.contacto-item div {
+  text-align: left;
+}
+
+.contacto-mapa {
+  flex: 1 1 300px;
+}
+
+.contacto-mapa img {
+  width: 100%;
   max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
+  border-radius: 8px;
 }
 
-.contacto-info p {
-  margin: 0.2rem 0;
-  word-break: break-word; /* evita que correo se salga */
-}
+@media (max-width: 768px) {
+  .contacto-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.contacto-info a {
-  color: var(--body-text);
-  text-decoration: none;
-}
-
-.contacto-info a:hover {
-  color: var(--catalogo-text-hover);
+  .contacto-mapa img {
+    max-width: 100%;
+  }
 }
 
 #mapa {
