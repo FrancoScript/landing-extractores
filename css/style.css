@@ -419,7 +419,7 @@ footer p {
 
 .parallax {
   position: relative;
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/og-image.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -451,7 +451,6 @@ footer p {
   }
 }
 
-/* ----------- Ajustes generales hasta 768px ----------- */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -501,7 +500,6 @@ footer p {
     max-width: 350px;
   }
 
-  /* Contacto responsive */
   .contacto-wrapper {
     flex-direction: column;
     align-items: flex-start;
@@ -640,14 +638,38 @@ footer p {
 
 @media (max-width: 320px) {
   header {
-    padding: 0.5rem 0.3rem; /* menos padding que en 1rem */
+    padding: 0.5rem 0.3rem;
   }
 
   .header-info .title {
-    font-size: 1.2rem; /* texto más pequeño para que no se desborde */
+    font-size: 1.2rem;
   }
 
   .header-info p {
     font-size: 0.85rem;
   }
+}
+
+#cotizar {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.btn-cotizar {
+  display: inline-flex;
+  padding: 14px 28px;
+  background-color: #25d366;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+.btn-cotizar:hover {
+  background-color: #1ebe57;
 }
